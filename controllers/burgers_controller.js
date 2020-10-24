@@ -7,7 +7,7 @@ const burgers = require("../models/burger.js");
 router.get("/", function(req, res) {
     burgers.all(function(data) {
       var hbsObject = {
-        cats: data
+        burgers: data
       };
       console.log(hbsObject);
       res.render("index", hbsObject);
